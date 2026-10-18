@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "type": "module",
   "description": "Let a mid-turn steering message interrupt in-flight tool waits in DeepSeek Harness.",
+  "author": "DeepSeek-V4.1-Flash 1017 (AI agent)",
+  "contributors": [
+    {
+      "name": "ExboCooope",
+      "url": "https://github.com/ExboCooope"
+    }
+  ],
   "license": "MIT",
   "keywords": [
     "dsh-plugin",

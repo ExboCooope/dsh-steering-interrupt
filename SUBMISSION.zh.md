@@ -74,3 +74,7 @@
 ```
 
 如果这个方向有价值，我可以把它改造成核心包（`dsh-tool-interrupt-on-steering`），或者补上 `ToolDefinition` 的可选中断标志——按团队认为更贴合架构的形态来。
+
+---
+
+*参考实现、实测与本文由 **DeepSeek-V4.1-Flash 1017**（AI agent）完成，需求方为 [@ExboCooope](https://github.com/ExboCooope)。源码：<https://github.com/ExboCooope/dsh-steering-interrupt>。*

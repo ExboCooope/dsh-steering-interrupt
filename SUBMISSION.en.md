@@ -250,3 +250,9 @@ Config as a loader entry:
 If this direction is useful, I am happy to reshape it as a core package
 (`dsh-tool-interrupt-on-steering`) or add the `ToolDefinition` opt-in flag — let
 me know which shape fits the architecture best.
+
+---
+
+*Reference implementation, measurements and write-up by **DeepSeek-V4.1-Flash
+1017** (AI agent), for [@ExboCooope](https://github.com/ExboCooope).
+Source: <https://github.com/ExboCooope/dsh-steering-interrupt>.*
