@@ -1,0 +1,28 @@
+{
+  "name": "@local/dsh-steering-interrupt",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Let a mid-turn steering message interrupt in-flight tool waits in DeepSeek Harness.",
+  "license": "MIT",
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "cordis",
+    "steering",
+    "agent"
+  ],
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
