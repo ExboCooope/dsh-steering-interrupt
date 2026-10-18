@@ -1,4 +1,4 @@
-# @local/dsh-steering-interrupt
+# @ExboCooope/dsh-steering-interrupt
 
 让插言（steering，运行中追加的消息）**打断正在等待的工具调用**。
 
@@ -33,7 +33,7 @@ promise。忽略该信号的工具仍会让调用方继续等 —— 这一点�
 
 ```yaml
 - id: steering-interrupt
-  name: '@local/dsh-steering-interrupt'
+  name: '@ExboCooope/dsh-steering-interrupt'
   config:
     minElapsedMs: 250      # 太年轻的调用（比如刚起的 write）不动它
     sourceKinds:           # 哪些来源算「插言」
@@ -65,22 +65,21 @@ node install.mjs desktop --remove
 ```json
 {
   "dependencies": {
-    "@local/dsh-steering-interrupt": "link:path/to/dsh-steering-interrupt"
+    "@ExboCooope/dsh-steering-interrupt": "link:path/to/dsh-steering-interrupt"
   },
   "dsh": {
     "profile": {
-      "bundles": ["@local/dsh-steering-interrupt"]
+      "bundles": ["@ExboCooope/dsh-steering-interrupt"]
     }
   }
 }
 ```
 
-> **发布成公开仓库时**：把 `package.json` 的 `name`、`cordis.patch.yml` 的
-> 条目 `name`、以及 profile 里的依赖名与目录链接一起改成你自己的 scope
-> （例如 `@your-name/dsh-steering-interrupt`）。三处必须一致，否则 loader
-> 解析不到。
+> 包名、`cordis.patch.yml` 的条目 `name`、profile 里的依赖名与目录链接必须
+> 三处一致，否则 loader 解析不到。`install.mjs` 会自动读取 `package.json` 的
+> `name`，并清理同一插件旧名字留下的条目（从 `@local/...` 迁过来时无需手工收拾）。
 
-脚本做两件事：在 profile 的 `node_modules/@local` 建到本目录的 junction，并把本包
+脚本做两件事：在 profile 的 `node_modules/@ExboCooope` 建到本目录的 junction，并把本包
 加进 `dsh.profile.bundles`。profile 的 manifest 与 patch 变化由 `dsh-hmr` 监听，
 **无需重启**即可生效（插件源码本身也在 `link:` 目标监听范围内）。
 

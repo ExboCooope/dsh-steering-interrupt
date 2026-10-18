@@ -241,7 +241,7 @@ Config as a loader entry:
 ```yaml
 - insert:
     - id: steering-interrupt
-      name: '<your-package>'
+      name: '@ExboCooope/dsh-steering-interrupt'
       config:
         minElapsedMs: 250
         sourceKinds: [user, subagent-settled, agent-message]

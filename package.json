@@ -1,5 +1,5 @@
 {
-  "name": "@local/dsh-steering-interrupt",
+  "name": "@ExboCooope/dsh-steering-interrupt",
   "version": "0.1.0",
   "type": "module",
   "description": "Let a mid-turn steering message interrupt in-flight tool waits in DeepSeek Harness.",
